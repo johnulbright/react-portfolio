@@ -1,5 +1,5 @@
 import React from 'react'
-import headshot from './assets/JohnUlbright.jpeg'
+import headshot from './assets/JohnUlbright1.jpeg'
 
 // import AppBar from "@material-ui/core/AppBar";
 // import CssBaseline from "@material-ui/core/CssBaseline";

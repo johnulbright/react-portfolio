@@ -14,7 +14,7 @@ const Header=()=>{
       <div>
         
               <Link to="/">Home</Link>
-              <Link to="/Past">Past</Link>
+              <Link to="/past">Past</Link>
               <Link to="/present">Present</Link>
               <Link to="/future">Future</Link>
         <Switch>
