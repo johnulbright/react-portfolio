@@ -6,36 +6,19 @@ import css from "./assets/CSS3_logo.png";
 import github from "./assets/github.png";
 import bootstrap from "./assets/bootstrap.png";
 
-const useStyles = makeStyles(() =>
-  createStyles({
-    icon: {
-      height: "60px",
-      fontSize: "60px",
-      margin: "auto",
-    },
-    badge: {
-      height: "100px",
-    },
-    chunk: {
-      justifyContent: "center",
-      alignItems: "center",
-      margin: "auto",
-      display: "flex",
-    },
-    container: {
-      justifyContent: "center",
-      alignItems: "center",
-      margin: "auto",
-      display: "flex",
-    },
-  })
-);
+interface BadgeProps {
+  classes: {
+    icon: string;
+    badge: string;
+    row: string;
+    container: string;
+  };
+}
 
-const GoldLearned = () => {
-  const classes = useStyles();
+const GoldLearned = ({classes}: BadgeProps) => {
   return (
     <Fade in={true} timeout={500}>
-          <div>
+          <div className={classes.row}>
             <img className={classes.icon} alt="html5 logo" src={html} />
             <img className={classes.icon} alt="css logo" src={css} />
             <img className={classes.icon} alt="js logo" src={js} />
@@ -49,8 +32,7 @@ const GoldLearned = () => {
       </Fade>
   )
 }
-const GoldMade = () => {
-  const classes = useStyles();
+const GoldMade = ({classes}: BadgeProps) => {
   return (
     <Fade in={true} timeout={500}>
           <div>
@@ -61,8 +43,7 @@ const GoldMade = () => {
     </Fade>
   )
 }
-const GoldIs = () => {
-  const classes = useStyles();
+const GoldIs = ({classes}: BadgeProps) => {
   return (
     <Fade in={true} timeout={500}>
           <div>
@@ -73,4 +54,15 @@ const GoldIs = () => {
     </Fade>
   );
 };
-export {GoldLearned,GoldMade,GoldIs}
+const GoldTo= ({classes}: BadgeProps) => {
+  return (
+    <Fade in={true} timeout={500}>
+      <div>
+        <Typography variant="body1">
+          let me share (the 2020 version of) myself with the world
+        </Typography>
+    </div>
+  </Fade>
+);
+};
+export {GoldLearned,GoldMade,GoldIs,GoldTo}
